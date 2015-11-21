@@ -34,6 +34,7 @@
             myarray = id.split("swkj");
             bfq();
             document.getElementById("pltext").innerHTML = myarray[1];
+            document.title = myarray[1] + "-全屏播放界面"
         }
         function iGetQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
