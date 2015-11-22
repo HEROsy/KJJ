@@ -114,7 +114,7 @@
             top_height = document.getElementById("topheight").clientHeight;
             llq_height = document.documentElement.clientHeight;
             body_height = llq_height - top_height - 110;
-            document.getElementById("maindiv").style.height = body_height + "px";
+            document.getElementById("maindiv").style.minHeight = body_height + "px";
         }
     </script>
 </head>
