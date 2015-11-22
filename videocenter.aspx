@@ -104,7 +104,10 @@
             bodyheight();
         }
         function link_bf(filename, titles) {
-            window.open("bfq.aspx?id=" + filename+"swkj"+titles, "_blank");
+            var canshu;
+            canshu = filename + "swkj" + titles;
+            canshu = encodeURIComponent(canshu);
+            window.open("bfq.aspx?id=" + canshu, "_blank");
         }
     </script>
 </head>
