@@ -118,7 +118,13 @@
         }
     </script>
 </head>
-
+    <%-- 后台变量说明：　大类名称：BigClassName  大类id: BigClassId
+                         新闻标题：Titles
+        　　　　　　　　发布时间：FbTimes
+        　　　　　　　　新闻内容：Contents
+        　　　　　　　　上一篇：json_pre
+        　　　　　　　　下一篇：json_next
+        --%>
 <body>
     <uc1:head runat="server" ID="head" />
 
