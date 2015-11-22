@@ -448,7 +448,7 @@
             var banner_height;
             banner_width = document.getElementById("banner_height").clientWidth;
             banner_height = banner_width / 5;
-            document.getElementById("banner_height").style.height = banner_height + "px";
+            document.getElementById("banner_height").style.minHeight = banner_height + "px";          
         }
         function getCurDate() {
             var d = new Date();
@@ -478,7 +478,7 @@
     </script>
 </head>
 <body>
-    <div class="top_back">
+    <div class="top_back" id="topheight">
         <div class="top_back_1">
             <div style="width: 1000px; margin: auto; height: 75px">
                 <div class="logo" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='Default.aspx'" title="回到首页">

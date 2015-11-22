@@ -361,11 +361,6 @@
             overflow: hidden;
             white-space: nowrap;
         }
-        .listbody {
-            background-image:url(img/listbody.jpg);
-            background-repeat:no-repeat;
-            background-position:center 428px;        
-        }
         li a {
             color:#71B465;
             font-weight:bold;
@@ -392,6 +387,13 @@
             -webkit-transition: color 0.7s linear;
             -o-transition: color 0.7s linear;
         }
+        .row-fluid:hover .ggsx {
+            height:56px;
+            transition: height 0.7s linear;
+            -moz-transition: height 0.7s linear;
+            -webkit-transition: height 0.7s linear;
+            -o-transition: height 0.7s linear;
+        }
         .listfenlei:hover {
             cursor:not-allowed;
         }
@@ -399,17 +401,39 @@
             display: block;
             float: right;
             margin: 15px 15px 0 0px;
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 12px;
+        }
+
+        .ggsx {
+            width: 2px;
+            height: 0px;
+            background-color: #FCFBFB;
+            position: absolute;
+            margin: -54px 0 0 20px;
         }
     </style>
 
     <script type="text/javascript">
         window.onload = function () {
             banner_height();
+            backimg();
             setInterval("getCurDate()", 1000);
             xzjt("xzjt1", "divjt1");
             xzjt("xzjt2", "divjt2");
+        }
+        window.onresize = function () {
+            banner_height();
+            backimg();
+        }
+        function backimg() {
+            var top_height;
+            var back_height;
+            top_height = document.getElementById("topheight").clientHeight;
+            back_height = top_height - 2;
+            document.getElementById("listbody").style.backgroundImage = "url(img/listbody.jpg)";
+            document.getElementById("listbody").style.backgroundRepeat = "no-repeat";
+            document.getElementById("listbody").style.backgroundPosition = "center " + back_height + "px";
         }
         function xzjt(jtid, divjtid) {
             (function () {
@@ -453,7 +477,7 @@
     </script>
 </head>
 
-<body class="listbody">
+<body id="listbody">
     <uc1:head runat="server" ID="head" />
 
     <div style="width: 1000px; margin: auto;">
@@ -527,7 +551,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -539,7 +563,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -551,7 +575,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -563,7 +587,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -575,7 +599,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -587,7 +611,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -599,7 +623,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -611,7 +635,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
@@ -623,7 +647,7 @@
                         <div class="listtime"><span class="timesj">06:45:32</span><span class="timeapm">A.M.</span><span class="timerq">2015/11/23</span></div>
                     </div>
                     <div class="span1">
-                        <div class="gg"></div>
+                        <div class="gg"></div><div class="ggsx"></div>
                     </div>
                     <div class="span8" onmouseover="this.style.cursor='pointer'" onclick="window.location.href='#'">
                         <div class="listbiaoti"><span class="listfenlei">生物、医药、管理</span><img src="img/add.png" class="add_ico" /><span class="listwenz">这里是标题标题标题标题，很长的题标题，很长的题标题，很长的一个标题！</span></div>
